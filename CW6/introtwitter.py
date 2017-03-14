@@ -39,7 +39,7 @@ auth=twitter.oauth.OAuth(TOKEN,TOKEN_SECRET,CONSUMER_KEY, CONSUMER_SECRET)
 t = twitter.Twitter(auth=auth)
 recent_tweets = t.statuses.user_timeline(screen_name='nohemivog',count=1)
 tweets_in_json= json.dumps(recent_tweets, indent=4, sort_keys=True)
-tweets_filename='tweets_cw6.json'
+tweets_filename='tweets.json'
 f=open(tweets_filename,'w')
 f.write(tweets_in_json)
 f.close()
